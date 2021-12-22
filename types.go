@@ -39,6 +39,7 @@ type dbsettings struct {
 
 // API config
 type httpapi struct {
+	CA									string `toml:"ca"`
 	Domain              string `toml:"api_domain"`
 	IP                  string
 	DisableRegistration bool   `toml:"disable_registration"`
@@ -52,6 +53,8 @@ type httpapi struct {
 	CorsOrigins         []string
 	UseHeader           bool   `toml:"use_header"`
 	HeaderName          string `toml:"header_name"`
+	EABKeyID            string `toml:"eab_key_id"`
+	EABMACKey           string `toml:"eab_mac_key"`
 }
 
 // Logging config

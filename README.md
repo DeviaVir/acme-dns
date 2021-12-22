@@ -121,7 +121,7 @@ See the INSTALL section for information on how to do this.
 
 1) Install [Go 1.13 or newer](https://golang.org/doc/install).
 
-2) Build acme-dns: 
+2) Build acme-dns:
 ```
 git clone https://github.com/joohoi/acme-dns
 cd acme-dns
@@ -188,7 +188,7 @@ docker run --rm --name acmedns                 \
 Note: In this documentation:
 - `auth.example.org` is the hostname of the acme-dns server
 - acme-dns will serve `*.auth.example.org` records
-- `198.51.100.1` is the **public** IP address of the system running acme-dns  
+- `198.51.100.1` is the **public** IP address of the system running acme-dns
 
 These values should be changed based on your environment.
 
@@ -214,7 +214,7 @@ $ curl -X POST https://auth.example.org/register
 ```
 $ curl -X POST \
   -H "X-Api-User: eabcdb41-d89f-4580-826f-3e62e9755ef2" \
-  -H "X-Api-Key: pbAXVjlIOE01xbut7YnAbkhMQIkcwoHO0ek2j4Q0" \
+  -H "X-Api-Key: REDACTED" \
   -d '{"subdomain": "d420c923-bbd7-4056-ab64-c3ca54c9b3cf", "txt": "___validation_token_received_from_the_ca___"}' \
   https://auth.example.org/update
 ```
@@ -244,7 +244,7 @@ nsname = "auth.example.org"
 nsadmin = "admin.example.org"
 # predefined records served in addition to the TXT
 records = [
-    # domain pointing to the public IP of your acme-dns server 
+    # domain pointing to the public IP of your acme-dns server
     "auth.example.org. A 198.51.100.1",
     # specify that auth.example.org will resolve any *.auth.example.org records
     "auth.example.org. NS auth.example.org.",
