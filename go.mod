@@ -1,4 +1,4 @@
-module github.com/joohoi/acme-dns
+module github.com/DeviaVir/acme-dns
 
 go 1.17
 

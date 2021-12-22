@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/joohoi/acme-dns.svg?branch=master)](https://travis-ci.org/joohoi/acme-dns) [![Coverage Status](https://coveralls.io/repos/github/joohoi/acme-dns/badge.svg?branch=master)](https://coveralls.io/github/joohoi/acme-dns?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/joohoi/acme-dns)](https://goreportcard.com/report/github.com/joohoi/acme-dns)
+[![Build Status](https://travis-ci.org/DeviaVir/acme-dns.svg?branch=master)](https://travis-ci.org/DeviaVir/acme-dns) [![Coverage Status](https://coveralls.io/repos/github/DeviaVir/acme-dns/badge.svg?branch=master)](https://coveralls.io/github/DeviaVir/acme-dns?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/DeviaVir/acme-dns)](https://goreportcard.com/report/github.com/DeviaVir/acme-dns)
 # acme-dns
 
 A simplified DNS server with a RESTful HTTP API to provide a simple way to automate ACME DNS challenges.
@@ -123,7 +123,7 @@ See the INSTALL section for information on how to do this.
 
 2) Build acme-dns:
 ```
-git clone https://github.com/joohoi/acme-dns
+git clone https://github.com/DeviaVir/acme-dns
 cd acme-dns
 export GOPATH=/tmp/acme-dns
 go build
@@ -154,11 +154,11 @@ go build
 
 ### Using Docker
 
-1) Pull the latest acme-dns Docker image: `docker pull joohoi/acme-dns`.
+1) Pull the latest acme-dns Docker image: `docker pull DeviaVir/acme-dns`.
 
 2) Create directories: `config` for the configuration file, and `data` for the sqlite3 database.
 
-3) Copy [configuration template](https://raw.githubusercontent.com/joohoi/acme-dns/master/config.cfg) to `config/config.cfg`.
+3) Copy [configuration template](https://raw.githubusercontent.com/DeviaVir/acme-dns/master/config.cfg) to `config/config.cfg`.
 
 4) Modify the `config.cfg` to suit your needs.
 
@@ -170,16 +170,16 @@ docker run --rm --name acmedns                 \
  -p 80:80                                      \
  -v /path/to/your/config:/etc/acme-dns:ro      \
  -v /path/to/your/data:/var/lib/acme-dns       \
- -d joohoi/acme-dns
+ -d DeviaVir/acme-dns
 ```
 
 ### Docker Compose
 
 1) Create directories: `config` for the configuration file, and `data` for the sqlite3 database.
 
-2) Copy [configuration template](https://raw.githubusercontent.com/joohoi/acme-dns/master/config.cfg) to `config/config.cfg`.
+2) Copy [configuration template](https://raw.githubusercontent.com/DeviaVir/acme-dns/master/config.cfg) to `config/config.cfg`.
 
-3) Copy [docker-compose.yml from the project](https://raw.githubusercontent.com/joohoi/acme-dns/master/docker-compose.yml), or create your own.
+3) Copy [docker-compose.yml from the project](https://raw.githubusercontent.com/DeviaVir/acme-dns/master/docker-compose.yml), or create your own.
 
 4) Edit the `config/config.cfg` and `docker-compose.yml` to suit your needs, and run `docker-compose up -d`.
 
